@@ -6,7 +6,7 @@
 from DSTC2.traindev.scripts import myLogger
 from traindev.scripts import file_reader
 from traindev.scripts import initializer
-from traindev.scripts.initializer import InputRaw
+from traindev.scripts.initializer import Set
 
 __author__ = "JOHNKYON"
 
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     token = initializer.token_initializer(raw["input"])
     dictionary = initializer.dictionary_initializer(token)
     # Build input vector
-    input_raw = InputRaw(token, dictionary)
-    for call in input_raw:
-        print call
+    one_set = Set(token, dictionary, raw["output"])
+    for call in one_set:
+        print call["output"]
 
