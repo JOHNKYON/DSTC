@@ -25,10 +25,11 @@ if __name__ == "__main__":
     dictionary = initializer.dictionary_initializer(token)
     # Build input vector
     one_set = Set(token, dictionary, raw["output"])
+    input_mtr, output_mtr = bp.bp_initialize(one_set.input_mtr, one_set.output_mtr)
     # get model
     model = bp.bp_builder(one_set.dimension * one_set.sentence_dim, len(one_set.act_dict) * one_set.sentence_dim)
     # train
-    X_train, X_test, y_train, y_test = train_test_split(one_set.input_mtr, one_set.output_mtr, test_size=0.2)
+    X_train, X_test, y_train, y_test = train_test_split(input_mtr, output_mtr, test_size=0.2)
     model.fit(X_train, y_train, batch_size=2, nb_epoch=5)
     # test
     print model.evaluate(X_test, y_test, batch_size=2)
