@@ -3,7 +3,7 @@
 from sklearn.cross_validation import train_test_split
 
 from DSTC2.traindev.scripts import myLogger
-from DSTC2.traindev.scripts.model import bp
+from DSTC2.traindev.scripts.model import LSTM
 from traindev.scripts import file_reader
 from traindev.scripts import initializer
 from traindev.scripts.initializer import Set
@@ -25,11 +25,11 @@ if __name__ == "__main__":
     dictionary = initializer.dictionary_initializer(token)
     # Build input vector
     one_set = Set(token, dictionary, raw["output"])
-    input_mtr, output_mtr = bp.bp_initialize(one_set.input_mtr, one_set.output_mtr)
+    input_mtr, output_mtr = LSTM.basic_LSTM_init(one_set.input_mtr, one_set.output_mtr)
     # get model
-    model = bp.bp_builder(one_set.sentence_length * one_set.sentence_count, len(one_set.act_dict) * one_set.sentence_count)
+    model = LSTM.get_basic_LSTM(one_set.sentence_length, len(one_set.act_dict))
     # train
     X_train, X_test, y_train, y_test = train_test_split(input_mtr, output_mtr, test_size=0.2)
-    model.fit(X_train, y_train, batch_size=2, nb_epoch=5)
+    model.fit(X_train, y_train, batch_size=16, nb_epoch=4)
     # test
     print model.evaluate(X_test, y_test, batch_size=2)
