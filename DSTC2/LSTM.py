@@ -27,7 +27,8 @@ if __name__ == "__main__":
     one_set = Set(token, dictionary, raw["output"])
     input_mtr, output_mtr = LSTM.basic_LSTM_init(one_set.input_mtr, one_set.output_mtr)
     # get model
-    model = LSTM.get_basic_LSTM(one_set.sentence_length, len(one_set.act_dict))
+    # model = LSTM.get_basic_LSTM(one_set.sentence_length, len(one_set.act_dict))
+    model = LSTM.get_LSTM(one_set.sentence_length, len(one_set.act_dict))
     # train
     X_train, X_test, y_train, y_test = train_test_split(input_mtr, output_mtr, test_size=0.2)
     model.fit(X_train, y_train, batch_size=16, nb_epoch=4)
