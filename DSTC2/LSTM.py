@@ -7,6 +7,7 @@ from DSTC2.traindev.scripts.model import LSTM
 from traindev.scripts import file_reader
 from traindev.scripts import initializer
 from traindev.scripts.initializer import Set
+from traindev.scripts.judge import recall_precision_F
 
 __author__ = "JOHNKYON"
 
@@ -30,7 +31,10 @@ if __name__ == "__main__":
     # model = LSTM.get_basic_LSTM(one_set.sentence_length, len(one_set.act_dict))
     model = LSTM.get_LSTM(one_set.sentence_length, len(one_set.act_dict))
     # train
-    X_train, X_test, y_train, y_test = train_test_split(input_mtr, output_mtr, test_size=0.2)
-    model.fit(X_train, y_train, batch_size=16, nb_epoch=4)
+    X_train, X_test, y_train, y_test = train_test_split(input_mtr, output_mtr, test_size=0.2, random_state=True)
+    model.fit(X_train, y_train, batch_size=16, nb_epoch=8)
     # test
     print model.evaluate(X_test, y_test, batch_size=2)
+    y_pre = model.predict(X_test, batch_size=16)
+    print("[recall: %s,\tprecision: %s,\tf_measure: %s]", recall_precision_F(y_test, y_pre))
+
