@@ -27,6 +27,7 @@ if __name__ == "__main__":
     # Build input vector
     one_set = Set(token, dictionary, raw["output"])
     input_mtr, output_mtr = LSTM.basic_LSTM_init(one_set.input_mtr, one_set.output_mtr)
+    # TODO:设计降维算法，需要将输出的维度降低。
     # get model
     # model = LSTM.get_basic_LSTM(one_set.sentence_length, len(one_set.act_dict))
     model = LSTM.get_LSTM(one_set.sentence_length, len(one_set.act_dict))
