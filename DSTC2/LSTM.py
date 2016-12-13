@@ -24,7 +24,7 @@ if __name__ == "__main__":
     logger = myLogger.myLogger("basic")
     logger.info("Starting basic")
     record_file = codecs.open("threshold_record.txt", 'wb+', encoding='utf8')
-    threshold = 0.05
+    threshold = 0.1
     plt.figure(1)
     # ready to plot
     thres = []
@@ -61,15 +61,15 @@ if __name__ == "__main__":
 
 
         f_measure_old = 0
-        recall, precision, f_measure = recall_precision_F(y_test, y_pre, threshold)
+        accuracy, recall, precision, f_measure = recall_precision_F(y_test, y_pre, threshold)
         f_m.append(f_measure)
         thres.append(threshold)
         record_file.write('threshold: {0}'.format(threshold))
         threshold += (f_measure - f_measure_old) / 200
 
 
-        print("[recall: {0},\tprecision: {1},\tf_measure: {2}, threshold: {3}]".format(recall, precision, f_measure, threshold))
-        record_file.write("[recall: {0},\tprecision: {1},\tf_measure: {2}]\n\n".format(recall, precision, f_measure))
+        print("[accuracy: {4}, recall: {0},\tprecision: {1},\tf_measure: {2}, threshold: {3}]".format(recall, precision, f_measure, threshold, accuracy))
+        record_file.write("[accuracy: {3}, recall: {0},\tprecision: {1},\tf_measure: {2}]\n\n".format(recall, precision, f_measure, accuracy))
         print "--------------------------------------------------------------"
     plt.plot(roll, f_m, 'b', roll, thres, 'r')
     plt.savefig('figure.jpg')
