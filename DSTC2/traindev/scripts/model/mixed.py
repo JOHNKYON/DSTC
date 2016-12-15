@@ -3,29 +3,56 @@ from keras.layers.core import Dense, Dropout, Activation
 from keras.layers.convolutional import Convolution1D, MaxPooling1D
 from keras.layers.recurrent import LSTM
 from DSTC2.traindev.scripts import myLogger
+from keras.layers.pooling import GlobalMaxPooling1D
 from keras.models import Sequential
 from keras.preprocessing import sequence
 from keras.layers import Embedding
 from keras.datasets import imdb
 from keras.utils.visualize_util import plot
-
+import numpy as np
 
 __author__ = "JOHNKYON"
 
 
-def get_mixed(sentence_length, output_dimension):
+def basic_cnn_LSTM_init(input_mtr, output_mtr):
+    return input_mtr, output_mtr
+
+
+def output_shape(y_train, y_test):
+    y_train = np.array(map(lambda session: reduce(lambda sentence1, sentence2: np.hstack((sentence1, sentence2)), session), y_train))
+    y_test = np.array(map(lambda session: reduce(lambda sentence1, sentence2: np.hstack((sentence1, sentence2)), session), y_test))
+    return y_train, y_test
+
+
+def get_mixed(input_shape, output_dimension):
+    # Convolution
+    filter_length = 5
+    nb_filter = 16
+    pool_length = 4
+
+    # LSTM
+    lstm_output_size = 1024
+
+    # Training
     logger = myLogger.myLogger('mixed')
     logger.info('Building mixed model')
     layer = 3
-    hidden_size = 32
+    hidden_size = 1024
     model = Sequential()
-    model.add(LSTM(hidden_size, input_dim=1, input_length=sentence_length, dropout_U=0.1, dropout_W=0.1,
-                   return_sequences=True))
-    model.add(LSTM(hidden_size, dropout_W=0.2, dropout_U=0.2, return_sequences=True))
-    model.compile(loss='binary_crossentropy',
+    model.add(Convolution1D(nb_filter=nb_filter,
+                            filter_length=filter_length,
+                            border_mode='valid',
+                            activation='relu',
+                            subsample_length=1,
+                            input_shape=input_shape))
+    model.add(MaxPooling1D(pool_length=pool_length))
+    model.add(LSTM(lstm_output_size, dropout_W=0.2, dropout_U=0.2))
+    model.add(Dense(output_dimension))
+
+    model.compile(loss='mse',
                   optimizer='adam',
                   metrics=['accuracy'])
-    plot(model, to_file="cnn_LSTM.jpg")
+    plot(model, to_file="cnn_lstm.jpg")
     return model
 
 
