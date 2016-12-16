@@ -1,0 +1,170 @@
+	model.add(LSTM(hidden_size, input_dim=1, input_length=sentence_length, dropout_U=0.1, dropout_W=0.1, return_sequences=True))
+	model.add(LSTM(hidden_size, dropout_W=0.2, dropout_U=0.2, return_sequences=True))
+	model.add(TimeDistributed(Dense(output_dimension)))
+    model.add(Activation('softmax'))
+    model.add(GlobalAveragePooling1D())
+    model.compile(loss="mse", optimizer='sgd', metrics=['accuracy', 'sparse_categorical_accuracy'])
+
+
+64944/64944 [==============================] - 66s - loss: 0.0151 - acc: 0.0607    
+Epoch 7/8
+64944/64944 [==============================] - 66s - loss: 0.0151 - acc: 0.0669    
+Epoch 8/8
+64944/64944 [==============================] - 67s - loss: 0.0150 - acc: 0.0708    
+16236/16236 [==============================] - 14s    
+[0.014953972660023448, 0.087891106183789106]
+
+-------------------------------------------------------------------------------------------------
+
+
+    model.add(LSTM(hidden_size, input_dim=1, input_length=sentence_length, dropout_U=0.1, dropout_W=0.1, return_sequences=True))
+    model.add(LSTM(hidden_size, dropout_W=0.2, dropout_U=0.2, return_sequences=True))
+    model.add(TimeDistributed(Dense(output_dimension)))
+    model.add(GlobalAveragePooling1D())
+    model.compile(loss="mse", optimizer='sgd', metrics=['accuracy', 'sparse_categorical_accuracy'])
+
+Epoch 6/8
+64944/64944 [==============================] - 63s - loss: 0.0120 - acc: 0.0934    
+Epoch 7/8
+64944/64944 [==============================] - 64s - loss: 0.0119 - acc: 0.0929    
+Epoch 8/8
+64944/64944 [==============================] - 64s - loss: 0.0117 - acc: 0.0966    
+16226/16236 [============================>.] - ETA: 0s[0.010098721628735889, 0.11406750431140675]
+
+----------------------------------------------------------------------------------------------------
+
+    model.add(LSTM(hidden_size, input_dim=1, input_length=sentence_length, dropout_U=0.1, dropout_W=0.1, return_sequences=True))
+    model.add(LSTM(hidden_size, dropout_W=0.2, dropout_U=0.2, return_sequences=True))
+    model.add(TimeDistributed(Dense(output_dimension)))
+    model.add(Activation('softmax'))
+    model.add(GlobalAveragePooling1D())
+    model.compile(loss="mse", optimizer='sgd', metrics=['accuracy', 'sparse_categorical_accuracy'])
+
+    X_train, X_test, y_train, y_test = train_test_split(input_mtr, output_mtr, test_size=0.2, random_state=True)
+    model.fit(X_train, y_train, batch_size=16, nb_epoch=8)
+
+
+Epoch 6/8
+64944/64944 [==============================] - 72s - loss: 0.0149 - acc: 0.0833 - sparse_categorical_accuracy: 7.6989e-05    
+Epoch 7/8
+64944/64944 [==============================] - 71s - loss: 0.0149 - acc: 0.0937 - sparse_categorical_accuracy: 4.6194e-05    
+Epoch 8/8
+64944/64944 [==============================] - 73s - loss: 0.0148 - acc: 0.0992 - sparse_categorical_accuracy: 1.5398e-05    
+16226/16236 [============================>.] - ETA: 0s[0.014682073835619657, 0.1130820399113082, 0.0]
+
+----------------------------------------------------------------------------------------------------
+
+
+    model.add(LSTM(hidden_size, input_dim=1, input_length=sentence_length, dropout_U=0.1, dropout_W=0.1, return_sequences=True))
+    model.add(LSTM(hidden_size, dropout_W=0.2, dropout_U=0.2, return_sequences=True))
+    model.add(TimeDistributed(Dense(output_dimension)))
+    model.add(Activation('tanh'))
+    model.add(GlobalAveragePooling1D())
+    model.compile(loss="mse", optimizer='sgd', metrics=['accuracy', 'sparse_categorical_accuracy'])
+
+Epoch 6/8
+64944/64944 [==============================] - 71s - loss: 0.0118 - acc: 0.1004 - sparse_categorical_accuracy: 3.8495e-04    
+Epoch 7/8
+64944/64944 [==============================] - 71s - loss: 0.0116 - acc: 0.1044 - sparse_categorical_accuracy: 7.3910e-04    
+Epoch 8/8
+64944/64944 [==============================] - 72s - loss: 0.0114 - acc: 0.1054 - sparse_categorical_accuracy: 0.0012    
+16232/16236 [============================>.] - ETA: 0s[0.0095844701997047591, 0.13057403301305739, 0.0]
+
+----------------------------------------------------------------------------------------------------
+
+	model.add(LSTM(hidden_size, input_dim=1, input_length=sentence_length, dropout_U=0.1, dropout_W=0.1, return_sequences=True))
+    model.add(LSTM(hidden_size, dropout_W=0.2, dropout_U=0.2, return_sequences=True))
+    model.add(TimeDistributed(Dense(output_dimension)))
+    model.add(Activation('softmax'))
+    model.add(GlobalMaxPooling1D())
+    model.add(Thresholded(theta=0.45))
+    model.compile(loss="mse", optimizer='sgd', metrics=['accuracy', 'sparse_categorical_accuracy'])
+
+Epoch 4/8
+64944/64944 [==============================] - 71s - loss: 0.0144 - acc: 0.7808 - sparse_categorical_accuracy: 0.7644    
+Epoch 5/8
+64944/64944 [==============================] - 71s - loss: 0.0144 - acc: 0.7808 - sparse_categorical_accuracy: 0.7644    
+Epoch 6/8
+64944/64944 [==============================] - 73s - loss: 0.0144 - acc: 0.7808 - sparse_categorical_accuracy: 0.7644    
+Epoch 7/8
+64944/64944 [==============================] - 72s - loss: 0.0144 - acc: 0.7808 - sparse_categorical_accuracy: 0.7644    
+Epoch 8/8
+64944/64944 [==============================] - 71s - loss: 0.0144 - acc: 0.7808 - sparse_categorical_accuracy: 0.7644    
+16228/16236 [============================>.] - ETA: 0s[0.014499205341514445, 0.78036462182803645, 0.76262626262626265]
+
+数据过于稀疏以至于所有预测结果均为0
+
+降维 拉大数据可分性 增大正向预测数
+
+----------------------------------------------------------------------------------------------------
+    model.add(LSTM(hidden_size, input_dim=1, input_length=sentence_length, dropout_U=0.1, dropout_W=0.1, return_sequences=True))
+    model.add(LSTM(hidden_size, dropout_W=0.2, dropout_U=0.2, return_sequences=True))
+    model.add(TimeDistributed(Dense(hidden_size)))
+    model.add(Activation('softmax'))
+    model.add(GlobalMaxPooling1D())
+    model.add(Dense(output_dimension))
+    model.compile(loss="mse", optimizer='sgd', metrics=['accuracy', 'sparse_categorical_accuracy'])
+
+
+
+64944/64944 [==============================] - 74s - loss: 0.0134 - acc: 0.1099 - sparse_categorical_accuracy: 0.0000e+00    
+Epoch 5/8
+64944/64944 [==============================] - 73s - loss: 0.0134 - acc: 0.1099 - sparse_categorical_accuracy: 0.0000e+00    
+Epoch 6/8
+64944/64944 [==============================] - 74s - loss: 0.0134 - acc: 0.1099 - sparse_categorical_accuracy: 0.0000e+00    
+Epoch 7/8
+64944/64944 [==============================] - 73s - loss: 0.0134 - acc: 0.1099 - sparse_categorical_accuracy: 0.0000e+00    
+Epoch 8/8
+64944/64944 [==============================] - 74s - loss: 0.0133 - acc: 0.1099 - sparse_categorical_accuracy: 0.0000e+00    
+16232/16236 [============================>.] - ETA: 0s[0.013325658904247839, 0.1130820399113082, 0.0]
+
+----------------------------------------------------------------------------------------------------
+    model.add(LSTM(hidden_size, input_dim=1, input_length=sentence_length, dropout_U=0.1, dropout_W=0.1, return_sequences=True))
+    model.add(LSTM(hidden_size, dropout_W=0.2, dropout_U=0.2, return_sequences=True))
+    model.add(TimeDistributed(Dense(hidden_size)))
+    model.add(Activation('softmax'))
+    model.add(GlobalMaxPooling1D())
+    model.add(Dense(output_dimension))
+    model.compile(loss="mse", optimizer='RMSprop', metrics=['accuracy', 'sparse_categorical_accuracy'])
+
+
+Epoch 5/8
+64944/64944 [==============================] - 84s - loss: 0.0041 - acc: 0.2507 - sparse_categorical_accuracy: 0.0963    
+Epoch 6/8
+64944/64944 [==============================] - 82s - loss: 0.0039 - acc: 0.2676 - sparse_categorical_accuracy: 0.1112    
+Epoch 7/8
+64944/64944 [==============================] - 80s - loss: 0.0036 - acc: 0.2869 - sparse_categorical_accuracy: 0.1275    
+Epoch 8/8
+64944/64944 [==============================] - 81s - loss: 0.0034 - acc: 0.2741 - sparse_categorical_accuracy: 0.1120    
+16232/16236 [============================>.] - ETA: 0s[0.0021980146237133621, 0.15034491254003449, 0.0]
+
+
+----------------------------------------------------------------------------------------------------
+
+    model.add(LSTM(hidden_size, input_dim=1, input_length=sentence_length, dropout_U=0.1, dropout_W=0.1, return_sequences=True))
+    model.add(LSTM(hidden_size, dropout_W=0.2, dropout_U=0.2, return_sequences=True))
+    model.add(TimeDistributed(Dense(hidden_size)))
+    model.add(Activation('softmax'))
+    model.add(GlobalMaxPooling1D())
+    model.add(Dense(output_dimension))
+    model.compile(loss="mse", optimizer='RMSprop', metrics=['accuracy', 'sparse_categorical_accuracy'])
+
+
+Epoch 7/12
+64944/64944 [==============================] - 81s - loss: 0.0035 - acc: 0.2766 - sparse_categorical_accuracy: 0.1149    
+Epoch 8/12
+64944/64944 [==============================] - 81s - loss: 0.0034 - acc: 0.2656 - sparse_categorical_accuracy: 0.1008    
+Epoch 9/12
+64944/64944 [==============================] - 81s - loss: 0.0032 - acc: 0.2901 - sparse_categorical_accuracy: 0.1234    
+Epoch 10/12
+64944/64944 [==============================] - 81s - loss: 0.0031 - acc: 0.2991 - sparse_categorical_accuracy: 0.1295    
+Epoch 11/12
+64944/64944 [==============================] - 81s - loss: 0.0030 - acc: 0.2974 - sparse_categorical_accuracy: 0.1287    
+Epoch 12/12
+64944/64944 [==============================] - 82s - loss: 0.0030 - acc: 0.3058 - sparse_categorical_accuracy: 0.1361    
+16232/16236 [============================>.] - ETA: 0s[0.0020320318625617283, 0.19358216309435822, 0.0]
+[recall: 0.951728132844,	precision: 0.796284329564,	f_measure: 0.867094731287, threshold: 0.11617930639]
+
+----------------------------------------------------------------------------------------------------
+
+

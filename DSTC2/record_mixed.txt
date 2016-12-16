@@ -1,0 +1,72 @@
+    # Convolution
+    filter_length = 5
+    nb_filter = 16
+    pool_length = 4
+
+    # LSTM
+    lstm_output_size = 70
+
+    # Training
+
+    layer = 3
+    hidden_size = 32	
+	model = Sequential()
+    model.add(Convolution1D(nb_filter=nb_filter,
+                            filter_length=filter_length,
+                            border_mode='valid',
+                            activation='relu',
+                            subsample_length=1,
+                            input_shape=input_shape))
+    model.add(MaxPooling1D(pool_length=pool_length))
+    model.add(LSTM(lstm_output_size, dropout_W=0.2, dropout_U=0.2))
+    model.add(Dense(output_dimension))
+
+    model.compile(loss='mse',
+                  optimizer='adam',
+                  metrics=['accuracy'])
+    plot(model, to_file="cnn_lstm.jpg")
+
+1082/1082 [==============================] - 76s - loss: 0.0049 - acc: 0.3281    
+Epoch 12/12
+1082/1082 [==============================] - 77s - loss: 0.0048 - acc: 0.3697    
+271/271 [==============================] - 9s     
+[0.0060883504171027527, 0.51660516605166051]
+[accuracy: 0.987230235939, recall: 0.896928982726,	precision: 0.536879595588,	f_measure: 0.671697570792, threshold: 0.151145922507]
+
+--------------------------------------------------------------------------------------------------
+
+    # Convolution
+    filter_length = 5
+    nb_filter = 16
+    pool_length = 4
+
+    # LSTM
+    lstm_output_size = 1024
+
+    # Training
+
+    layer = 3
+    hidden_size = 1024
+	model = Sequential()
+    model.add(Convolution1D(nb_filter=nb_filter,
+                            filter_length=filter_length,
+                            border_mode='valid',
+                            activation='relu',
+                            subsample_length=1,
+                            input_shape=input_shape))
+    model.add(MaxPooling1D(pool_length=pool_length))
+    model.add(LSTM(lstm_output_size, dropout_W=0.2, dropout_U=0.2))
+    model.add(Dense(output_dimension))
+
+    model.compile(loss='mse',
+                  optimizer='RMSprop',
+                  metrics=['accuracy'])
+1082/1082 [==============================] - 76s - loss: 0.0046 - acc: 0.3031    
+Epoch 12/12
+1082/1082 [==============================] - 74s - loss: 0.0045 - acc: 0.3087    
+271/271 [==============================] - 9s     
+[0.0050561941014877713, 0.11439114391143912]
+[accuracy: 0.989268142681, recall: 0.904798464491,	precision: 0.585081295768,	f_measure: 0.710635411171, threshold: 0.154562264245]
+--------------------------------------------------------------
+
+
