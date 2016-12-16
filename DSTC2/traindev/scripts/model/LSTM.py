@@ -39,7 +39,7 @@ def get_LSTM(sentence_length, output_dimension):
     # model.add(Activation('sigmoid'))
     # model.add(Dense(output_dimension))
     # model.compile(loss="categorical_crossentropy", optimizer='sgd', metrics=['accuracy'])
-    model.compile(loss="mse", optimizer='RMSprop', metrics=['accuracy', 'sparse_categorical_accuracy'])
+    model.compile(loss="msle", optimizer='RMSprop', metrics=['accuracy', 'sparse_categorical_accuracy'])
     plot(model, to_file="lstm.png")
     logger.info('Building finished')
     return model

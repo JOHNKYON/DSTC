@@ -49,11 +49,11 @@ def recall_precision_F(y_true, y_pred, threshold):
     #         elif y_true[n][m] == 0 and y_pred[n][m] == 1:
     #             FP += 1
 
-    if (TP+FP) != 0:
+    if (TP+FN) != 0:
         recall = TP/(TP+FN)
     else:
         recall = 'NaN'
-    if (TP+FN) != 0:
+    if (TP+FP) != 0:
         precision = TP/(TP+FP)
     else:
         precision = 'NaN'
