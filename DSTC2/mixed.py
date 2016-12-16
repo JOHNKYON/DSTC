@@ -25,7 +25,7 @@ if __name__ == "__main__":
     global logger
     logger = myLogger.myLogger("basic")
     logger.info("Starting basic")
-    record_file = codecs.open("threshold_record.txt", 'wb+', encoding='utf8')
+    record_file = codecs.open("mixed_threshold_record.txt", 'wb+', encoding='utf8')
     threshold = 0.1
     plt.figure(1)
     # ready to plot
