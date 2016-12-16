@@ -25,6 +25,9 @@ def output_shape(y_train, y_test):
 
 
 def get_mixed(input_shape, output_dimension):
+    logger = myLogger.myLogger('mixed')
+    logger.info('Building mixed model')
+
     # Convolution
     filter_length = 5
     nb_filter = 16
@@ -34,8 +37,7 @@ def get_mixed(input_shape, output_dimension):
     lstm_output_size = 1024
 
     # Training
-    logger = myLogger.myLogger('mixed')
-    logger.info('Building mixed model')
+
     layer = 3
     hidden_size = 1024
     model = Sequential()
@@ -50,7 +52,7 @@ def get_mixed(input_shape, output_dimension):
     model.add(Dense(output_dimension))
 
     model.compile(loss='mse',
-                  optimizer='adam',
+                  optimizer='RMSprop',
                   metrics=['accuracy'])
     plot(model, to_file="cnn_lstm.jpg")
     return model

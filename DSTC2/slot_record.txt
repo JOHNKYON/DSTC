@@ -1,0 +1,23 @@
+slot
+    model.add(LSTM(hidden_size, input_dim=1, input_length=sentence_length, dropout_U=0.1, dropout_W=0.1, return_sequences=True))
+    model.add(LSTM(hidden_size, dropout_W=0.2, dropout_U=0.2, return_sequences=True))
+    model.add(TimeDistributed(Dense(hidden_size)))
+    model.add(Activation('softmax'))
+    model.add(GlobalMaxPooling1D())
+    model.add(Dense(output_dimension))
+    model.compile(loss="mse", optimizer='RMSprop', metrics=['accuracy', 'sparse_categorical_accuracy'])
+
+
+Epoch 9/12
+64944/64944 [==============================] - 81s - loss: 0.0035 - acc: 0.2717 - sparse_categorical_accuracy: 0.1058    
+Epoch 10/12
+64944/64944 [==============================] - 81s - loss: 0.0033 - acc: 0.2730 - sparse_categorical_accuracy: 0.1047    
+Epoch 11/12
+64944/64944 [==============================] - 81s - loss: 0.0032 - acc: 0.2658 - sparse_categorical_accuracy: 0.0968    
+Epoch 12/12
+64944/64944 [==============================] - 81s - loss: 0.0031 - acc: 0.2684 - sparse_categorical_accuracy: 0.0965    
+16236/16236 [==============================] - 16s    
+[0.00224686892257478, 0.16974624291697463, 0.0]
+[recall: 0.943039196756,	precision: 0.783571313974,	f_measure: 0.855941114616, threshold: 0.116354505424]
+
+--------------------------------------------------------------------------------------------------------------------
