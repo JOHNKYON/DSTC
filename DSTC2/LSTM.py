@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-  
 
+from __future__ import print_function
+from __future__ import print_function
 from sklearn.cross_validation import train_test_split
 
 from DSTC2.traindev.scripts import myLogger
@@ -18,12 +20,12 @@ global logger
 if __name__ == "__main__":
     # Choose mode
     # 1:act 2:slot
-    mode = 2
+    mode = 1
 
     global logger
     logger = myLogger.myLogger("basic")
     logger.info("Starting basic")
-    record_file = codecs.open("threshold_record.txt", 'wb+', encoding='utf8')
+    record_file = codecs.open("LSTM_threshold_record.txt", 'wb+', encoding='utf8')
     threshold = 0.1
     plt.figure(1)
     # ready to plot
@@ -55,7 +57,7 @@ if __name__ == "__main__":
 
 
         # test
-        print model.evaluate(X_test, y_test, batch_size=2)
+        print(model.evaluate(X_test, y_test, batch_size=2))
         y_pre = model.predict(X_test, batch_size=16)
         # print("[recall: {0},\tprecision: {1},\tf_measure: {2}]".format(recall_precision_F(y_test, y_pre)))
 
@@ -70,7 +72,7 @@ if __name__ == "__main__":
 
         print("[accuracy: {4}, recall: {0},\tprecision: {1},\tf_measure: {2}, threshold: {3}]".format(recall, precision, f_measure, threshold, accuracy))
         record_file.write("[accuracy: {3}, recall: {0},\tprecision: {1},\tf_measure: {2}]\n\n".format(recall, precision, f_measure, accuracy))
-        print "--------------------------------------------------------------"
+        print("--------------------------------------------------------------")
     plt.plot(roll, f_m, 'b', roll, thres, 'r')
     plt.savefig('figure.jpg')
     record_file.close()
