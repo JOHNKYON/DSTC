@@ -51,7 +51,7 @@ def get_mixed(input_shape, output_dimension):
     model.add(LSTM(lstm_output_size, dropout_W=0.2, dropout_U=0.2))
     model.add(Dense(output_dimension))
 
-    model.compile(loss='mse',
+    model.compile(loss='binary_crossentropy',
                   optimizer='RMSprop',
                   metrics=['accuracy'])
     plot(model, to_file="cnn_lstm.jpg")
@@ -108,7 +108,7 @@ def sample_mixed():
     model.add(Dense(1))
     model.add(Activation('sigmoid'))
 
-    model.compile(loss='binary_crossentropy',
+    model.compile(loss='cosine_proximity',
                   optimizer='adam',
                   metrics=['accuracy'])
 

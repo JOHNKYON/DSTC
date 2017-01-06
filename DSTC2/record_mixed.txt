@@ -68,5 +68,107 @@ Epoch 12/12
 [0.0050561941014877713, 0.11439114391143912]
 [accuracy: 0.989268142681, recall: 0.904798464491,	precision: 0.585081295768,	f_measure: 0.710635411171, threshold: 0.154562264245]
 --------------------------------------------------------------
+    model = Sequential()
+    model.add(Convolution1D(nb_filter=nb_filter,
+                            filter_length=filter_length,
+                            border_mode='valid',
+                            activation='relu',
+                            subsample_length=1,
+                            input_shape=input_shape))
+    model.add(MaxPooling1D(pool_length=pool_length))
+    model.add(LSTM(lstm_output_size, dropout_W=0.2, dropout_U=0.2))
+    model.add(Dense(output_dimension))
 
+    model.compile(loss='mape',
+                  optimizer='RMSprop',
+                  metrics=['accuracy'])
+    plot(model, to_file="cnn_lstm.jpg")
+Epoch 12/12
+1082/1082 [==============================] - 75s - loss: 1488586.8662 - acc: 0.9972    
+271/271 [==============================] - 9s     
+[2578875.1374538746, 0.99261992619926198]
+[accuracy: 0.983752655708, recall: 0.062763915547,	precision: 0.260350318471,	f_measure: 0.101144447881, threshold: 0.108054881781]
+--------------------------------------------------------------
+    # Convolution
+    filter_length = 5
+    nb_filter = 16
+    pool_length = 4
 
+    # LSTM
+    lstm_output_size = 1024
+
+    # Training
+
+    layer = 3
+    hidden_size = 1024
+    model = Sequential()
+    model.add(Convolution1D(nb_filter=nb_filter,
+                            filter_length=filter_length,
+                            border_mode='valid',
+                            activation='relu',
+                            subsample_length=1,
+                            input_shape=input_shape))
+    model.add(MaxPooling1D(pool_length=pool_length))
+    model.add(LSTM(lstm_output_size, dropout_W=0.2, dropout_U=0.2))
+    model.add(Dense(output_dimension))
+
+    model.compile(loss='squared_hinge',
+                  optimizer='RMSprop',
+                  metrics=['accuracy'])
+Epoch 12/12
+1082/1082 [==============================] - 123s - loss: 0.9856 - acc: 0.0000e+00   
+271/271 [==============================] - 9s     
+[0.98548908427192716, 0.0]
+[accuracy: 0.400069887063, recall: 0.998464491363,	precision: 0.0236668622982,	f_measure: 0.0462377394883, threshold: 0.100231188697]
+--------------------------------------------------------------
+    model.compile(loss='binary_crossentropy',
+                  optimizer='adam',
+                  metrics=['accuracy'])
+Epoch 12/12
+1082/1082 [==============================] - 149s - loss: 0.9856 - acc: 0.0000e+00   
+271/271 [==============================] - 9s     
+[0.98548552118984101, 0.0]
+[accuracy: 0.418475343844, recall: 0.998272552783,	precision: 0.0243932181132,	f_measure: 0.0476227538057, threshold: 0.100238113769]
+--------------------------------------------------------------
+    model.compile(loss='categorical_crossentropy',
+                  optimizer='adam',
+                  metrics=['accuracy'])
+Epoch 12/12
+1082/1082 [==============================] - 148s - loss: 0.9856 - acc: 0.0000e+00   
+271/271 [==============================] - 9s     
+[0.98548673835627709, 0.0]
+[accuracy: 0.407480711171, recall: 0.998272552783,	precision: 0.0239514064141,	f_measure: 0.0467804171651, threshold: 0.100233902086]
+--------------------------------------------------------------
+    model.compile(loss='sparse_categorical_crossentropy',
+                  optimizer='adam',
+                  metrics=['accuracy'])
+1082/1082 [==============================] - 164s - loss: 0.9856 - acc: 0.0000e+00   
+271/271 [==============================] - 9s     
+[0.98547362533442651, 0.0]
+[accuracy: 0.421463714637, recall: 0.998848368522,	precision: 0.0245295825634,	f_measure: 0.0478832546627, threshold: 0.100239416273]
+--------------------------------------------------------------
+    model.compile(loss='kullback_leibler_divergence',
+                  optimizer='adam',
+                  metrics=['accuracy'])
+[0.9854860252999732, 0.0]
+[accuracy: 0.42616292072, recall: 0.998272552783,	precision: 0.0247119473547,	f_measure: 0.0482299756578, threshold: 0.100241149878]
+--------------------------------------------------------------
+    model.compile(loss='poisson',
+                  optimizer='adam',
+                  metrics=['accuracy'])
+Epoch 12/12
+1082/1082 [==============================] - 141s - loss: 0.9856 - acc: 0.0000e+00   
+271/271 [==============================] - 9s     
+[0.98548615154744956, 0.0]
+[accuracy: 0.413205859331, recall: 0.998272552783,	precision: 0.0241794514179,	f_measure: 0.0472152875494, threshold: 0.100236076438]
+--------------------------------------------------------------
+    model.compile(loss='hinge',
+                  optimizer='RMSprop',
+                  metrics=['accuracy'])
+    plot(model, to_file="cnn_lstm.jpg")
+Epoch 12/12
+1082/1082 [==============================] - 169s - loss: 0.9856 - acc: 0.0933   
+271/271 [==============================] - 9s     
+[0.98548512925081144, 0.040590405904059039]
+[accuracy: 0.409820530023, recall: 0.998272552783,	precision: 0.0240440846744,	f_measure: 0.0469571733605, threshold: 0.100234785867]
+--------------------------------------------------------------

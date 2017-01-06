@@ -33,6 +33,7 @@ if __name__ == "__main__":
     f_m = []
     # 选择模式
     roll = range(0, 16)
+    f_measure_old = 0
     for n in roll:
         dataset = file_reader.get_dataset("dstc2_debug")
         logger.info("token check test begin")
@@ -64,12 +65,12 @@ if __name__ == "__main__":
         # print("[recall: {0},\tprecision: {1},\tf_measure: {2}]".format(recall_precision_F(y_test, y_pre)))
 
 
-        f_measure_old = 0
         accuracy, recall, precision, f_measure = recall_precision_F(y_test, y_pre, threshold)
         f_m.append(f_measure)
         thres.append(threshold)
         record_file.write('threshold: {0}'.format(threshold))
         threshold += (f_measure - f_measure_old) / 200
+        f_measure_old = f_measure
 
 
         print("[accuracy: {4}, recall: {0},\tprecision: {1},\tf_measure: {2}, threshold: {3}]".format(recall, precision, f_measure, threshold, accuracy))
