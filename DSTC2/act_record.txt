@@ -167,4 +167,52 @@ Epoch 12/12
 
 ----------------------------------------------------------------------------------------------------
 
+    model.add(LSTM(hidden_size, input_dim=1, input_length=sentence_length, dropout_U=0.1, dropout_W=0.1, return_sequences=True))
+    model.add(LSTM(hidden_size, dropout_W=0.2, dropout_U=0.2, return_sequences=True))
+    model.add(TimeDistributed(Dense(hidden_size)))
+    model.add(Activation('softmax'))
+    model.add(GlobalMaxPooling1D())
+    model.add(Dense(output_dimension))
+    model.compile(loss="msle", optimizer='RMSprop', metrics=['accuracy', 'sparse_categorical_accuracy'])
+16234/16236 [============================>.] - ETA: 0s[0.0025335534696612253, 0.12158167036215817, 0.0]
+[accuracy: 0.994157203969, recall: 0.687740940632,	precision: 0.884262701363,	f_measure: 0.773717879215, threshold: 0.162046273093]
+----------------------------------------------------------------------------------------------------
+    hidden_size = 32
+    model = Sequential()
+    # model.add(LSTM(output_dimension, input_dim=sentence_length, input_length=3, dropout_U=0.1, dropout_W=0.1, return_sequences=True))
+    model.add(LSTM(hidden_size, input_dim=1, input_length=sentence_length, dropout_U=0.1, dropout_W=0.1, return_sequences=True))
+    model.add(LSTM(hidden_size, dropout_W=0.2, dropout_U=0.2, return_sequences=True))
+    model.add(TimeDistributed(Dense(hidden_size)))
+    model.add(Activation('softmax'))
+    model.add(GlobalMaxPooling1D())
+    model.add(Dense(output_dimension))
+    # model.add(Lambda(lambda x: 1 * (x > 0.45)))
+    # model.add(Thresholded(theta=0.45))
+    # sigmoid函数反而降低了各节点之间的差异性
+    # model.add(Activation('sigmoid'))
+    # model.add(Dense(output_dimension))
+    # model.compile(loss="categorical_crossentropy", optimizer='sgd', metrics=['accuracy'])
+    model.compile(loss="mape", optimizer='RMSprop', metrics=['accuracy', 'sparse_categorical_accuracy'])
+    plot(model, to_file="lstm.png")
+[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN, threshold: 0.1]
+--------------------------------------------------------------
+
+    model.compile(loss="msle", optimizer='RMSprop', metrics=['accuracy', 'sparse_categorical_accuracy'])
+16234/16236 [============================>.] - ETA: 0s[0.0021938693363797212, 0.1171470805617147, 0.0]
+[accuracy: 0.994423167372, recall: 0.77467232074,	precision: 0.830028913672,	f_measure: 0.801395812562, threshold: 0.104006979063]
+--------------------------------------------------------------
+    model.compile(loss="squared_hinge ", optimizer='RMSprop', metrics=['accuracy', 'sparse_categorical_accuracy'])
+16234/16236 [============================>.] - ETA: 0s[0.98547561223297231, 0.7799950726779995, 0.76373491007637351]
+[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762, threshold: 0.100143164634]
+--------------------------------------------------------------
+    model.compile(loss="hinge", optimizer='RMSprop', metrics=['accuracy', 'sparse_categorical_accuracy'])
+3964/3969 [============================>.] - ETA: 0s[0.94099921183310997, 0.10531620055429579, 0.034265558075081887]
+[accuracy: 0.104457271124, recall: 1.0,	precision: 0.0618123792727,	f_measure: 0.11642806296, threshold: 0.100582140315]
+--------------------------------------------------------------
+    model.compile(loss="binary_crossentropy", optimizer='RMSprop', metrics=['accuracy', 'sparse_categorical_accuracy'])
+3969/3969 [==============================] - 4s     
+[0.13572514869587943, 0.79199019644355917, 0.0]
+[accuracy: 0.955667789001, recall: 0.88373447205,	precision: 0.581853035144,	f_measure: 0.701703013023, threshold: 0.103508515065]
+--------------------------------------------------------------
+
 

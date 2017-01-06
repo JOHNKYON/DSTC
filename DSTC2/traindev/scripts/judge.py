@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-  
 import numpy as np
+import random
+from DSTC2.traindev.scripts.util.utils import dict_verse
 
 __author__ = "JOHNKYON"
 
@@ -63,3 +65,41 @@ def recall_precision_F(y_true, y_pred, threshold):
         f_measure = 2 * precision * recall / (precision + recall)
     accuracy = (TP + TN)/(TP + TN + FP + FN)
     return accuracy, recall, precision, f_measure
+
+
+def reduction(dictionary, x, y_true, y_pred, y_dic):
+    """
+    Show vectorized x and y into sentence and real act
+    :param dictionary:
+    :param x:
+    :param y_true:
+    :param y_pred:
+    :param y_dic:
+    :return:
+    """
+    for n in range(0, 10):
+        index = random.randint(0, len(y_true))
+        # TODO: id2token not exist
+        id2token = dict_verse(dictionary.token2id)
+        sentence = ""
+        for word in x[index]:
+            sentence += id2token[word[0]]+" "
+        print(sentence)
+
+        # Reduct y
+        y_index_true = []
+        y_index_pred = []
+        for n in range(0, len(y_true[index])):
+            if y_true[index][n] == 1:
+                y_index_true.append(n)
+            if y_pred[index][n] == 1:
+                y_index_pred.append(n)
+        print("True")
+        for key in y_dic:
+            if y_dic[key] in y_index_true:
+                print(key)
+
+        print("Pred")
+        for key in y_dic:
+            if y_dic[key] in y_index_pred:
+                print(key)

@@ -23,7 +23,6 @@ def get_LSTM(sentence_length, output_dimension):
     """
     logger = myLogger.myLogger('LSTM')
     logger.info('Building LSTM model')
-    layer = 3
     hidden_size = 32
     model = Sequential()
     # model.add(LSTM(output_dimension, input_dim=sentence_length, input_length=3, dropout_U=0.1, dropout_W=0.1, return_sequences=True))
@@ -39,7 +38,7 @@ def get_LSTM(sentence_length, output_dimension):
     # model.add(Activation('sigmoid'))
     # model.add(Dense(output_dimension))
     # model.compile(loss="categorical_crossentropy", optimizer='sgd', metrics=['accuracy'])
-    model.compile(loss="msle", optimizer='RMSprop', metrics=['accuracy', 'sparse_categorical_accuracy'])
+    model.compile(loss="categorical_crossentropy0", optimizer='RMSprop', metrics=['accuracy', 'sparse_categorical_accuracy'])
     plot(model, to_file="lstm.png")
     logger.info('Building finished')
     return model
@@ -66,6 +65,14 @@ def basic_LSTM_init(input_mtr, output_mtr):
     input_mtr = np.array(map(lambda sentence: np.array(map(lambda word: np.array([word]), sentence)), input_mtr))
     # input_mtr = np.array(map(lambda s: np.vstack((s, s, s)), input_mtr))
     output_mtr = reduce(lambda session1, session2: np.vstack((session1, session2)), output_mtr)
+    bad_input = np.zeros([len(input_mtr[0]), 1])
+    bad_output = np.zeros([len(output_mtr[0]), 1])
+    bad_input_index = []
+    for n in range(0, len(input_mtr)):
+        if (input_mtr[n] == bad_input).all():
+            bad_input_index.append(n)
+    input_mtr = np.delete(input_mtr, bad_input_index, 0)
+    output_mtr = np.delete(output_mtr, bad_input_index, 0)
     return input_mtr, output_mtr
 
 

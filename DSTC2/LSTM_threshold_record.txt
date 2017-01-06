@@ -1,0 +1,306 @@
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.985475598558, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.995898564358, recall: 0.83866615266,	precision: 0.873870255071,	f_measure: 0.855906363726]
+
+threshold: 0.104279531819[accuracy: 0.99667405765, recall: 0.892251349268,	precision: 0.88037276531,	f_measure: 0.886272257323]
+
+threshold: 0.104431361287[accuracy: 0.996212121212, recall: 0.853508095605,	precision: 0.881896036646,	f_measure: 0.867469879518]
+
+threshold: 0.104337349398[accuracy: 0.9953190441, recall: 0.798959136469,	precision: 0.868244658567,	f_measure: 0.832162216422]
+
+threshold: 0.104160811082[accuracy: 0.992133082488, recall: 0.587702390131,	precision: 0.819623655914,	f_measure: 0.684553210597]
+
+threshold: 0.103422766053[accuracy: 0.994644336939, recall: 0.74865073246,	precision: 0.864455820165,	f_measure: 0.802396446648]
+
+threshold: 0.104011982233[accuracy: 0.995450625994, recall: 0.803777949113,	precision: 0.872932803014,	f_measure: 0.836929252383]
+
+threshold: 0.104184646262[accuracy: 0.993922036328, recall: 0.692945258288,	precision: 0.861490534388,	f_measure: 0.768080333298]
+
+threshold: 0.103840401666[accuracy: 0.994034020919, recall: 0.694872783346,	precision: 0.868047194799,	f_measure: 0.771865967241]
+
+threshold: 0.103859329836[accuracy: 0.992681806983, recall: 0.582305319969,	precision: 0.871107266436,	f_measure: 0.698012939002]
+
+threshold: 0.103490064695[accuracy: 0.996259714663, recall: 0.891287586739,	precision: 0.856931060044,	f_measure: 0.873771730915]
+
+threshold: 0.104368858655[accuracy: 0.995218257968, recall: 0.787972243639,	precision: 0.870528109029,	f_measure: 0.827195467422]
+
+threshold: 0.104135977337[accuracy: 0.993224932249, recall: 0.647262914418,	precision: 0.850557244174,	f_measure: 0.735113835377]
+
+threshold: 0.103675569177[accuracy: 0.993821250196, recall: 0.697378565921,	precision: 0.850293772033,	f_measure: 0.766281901938]
+
+threshold: 0.10383140951[accuracy: 0.995137069139, recall: 0.79799537394,	precision: 0.857320356181,	f_measure: 0.826594788859]
+
+threshold: 0.104132973944[accuracy: 0.994423167372, recall: 0.77467232074,	precision: 0.830028913672,	f_measure: 0.801395812562]
+
+threshold: 0.1[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0152802974311, recall: 1.0,	precision: 0.0145353886844,	f_measure: 0.0286542763249]
+
+threshold: 0.100143271382[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.1[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.100143164634[accuracy: 0.0145244014424, recall: 1.0,	precision: 0.0145244014424,	f_measure: 0.028632926762]
+
+threshold: 0.1[accuracy: 0.995341441018, recall: 0.942174248265,	precision: 0.781829814459,	f_measure: 0.854545454545]
+
+threshold: 0.1[accuracy: 0.99568859325, recall: 0.944294525829,	precision: 0.796585365854,	f_measure: 0.864173575587]
+
+threshold: 0.1[accuracy: 0.921299159394, recall: 0.907220496894,	precision: 0.422298518251,	f_measure: 0.576325524044]
+
+threshold: 0.1[accuracy: 0.937309603976, recall: 0.905085403727,	precision: 0.483312603648,	f_measure: 0.630135135135]
+
+threshold: 0.1[accuracy: 0.947181566229, recall: 0.900038819876,	precision: 0.530913670712,	f_measure: 0.667866916319]
+
+threshold: 0.1[accuracy: 0.926384021622, recall: 0.908579192547,	precision: 0.440026320737,	f_measure: 0.592906903103]
+
+threshold: 0.1[accuracy: 0.939130534369, recall: 0.923330745342,	precision: 0.491577968379,	f_measure: 0.641580686493]
+
+threshold: 0.1[accuracy: 0.93204150347, recall: 0.906832298137,	precision: 0.461386529725,	f_measure: 0.611598376751]
+
+threshold: 0.1[accuracy: 0.923910304863, recall: 0.921001552795,	precision: 0.432070661082,	f_measure: 0.588198834759]
+
+threshold: 0.1[accuracy: 0.925547996977, recall: 0.870535714286,	precision: 0.434635139064,	f_measure: 0.57979445414]
+
+threshold: 0.1[accuracy: 0.938855676951, recall: 0.902562111801,	precision: 0.490144408137,	f_measure: 0.635289295717]
+
+threshold: 0.1[accuracy: 0.944261206166, recall: 0.91149068323,	precision: 0.515647304271,	f_measure: 0.658671716109]
+
+threshold: 0.1[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.1[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590141780618, recall: 1.0,	precision: 0.0590034013995,	f_measure: 0.111431939353]
+
+threshold: 0.100557159697[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0623468242516, recall: 1.0,	precision: 0.0592006986418,	f_measure: 0.111783722797]
+
+threshold: 0.100558918614[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590714400238, recall: 1.0,	precision: 0.0590067802822,	f_measure: 0.111437965046]
+
+threshold: 0.100557189825[accuracy: 0.0621750383655, recall: 1.0,	precision: 0.0591904964327,	f_measure: 0.111765535344]
+
+threshold: 0.100558827677[accuracy: 0.101181886896, recall: 1.0,	precision: 0.0616010043642,	f_measure: 0.116053025781]
+
+threshold: 0.100580265129[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.0590027256694, recall: 1.0,	precision: 0.0590027256694,	f_measure: 0.111430734292]
+
+threshold: 0.100557153671[accuracy: 0.104457271124, recall: 1.0,	precision: 0.0618123792727,	f_measure: 0.11642806296]
+
+threshold: 0.1[accuracy: 0.958450720355, recall: 0.847631987578,	precision: 0.605686546463,	f_measure: 0.706519980586]
+
+threshold: 0.103532599903[accuracy: 0.950445498065, recall: 0.914596273292,	precision: 0.547970694267,	f_measure: 0.685331975856]
+
+threshold: 0.103426659879[accuracy: 0.95428204952, recall: 0.877911490683,	precision: 0.573548059853,	f_measure: 0.693818070256]
+
+threshold: 0.103469090351[accuracy: 0.958015529444, recall: 0.698369565217,	precision: 0.630122591944,	f_measure: 0.662493095194]
+
+threshold: 0.103312465476[accuracy: 0.951052474862, recall: 0.871312111801,	precision: 0.554197530864,	f_measure: 0.677482644129]
+
+threshold: 0.103387413221[accuracy: 0.957122242837, recall: 0.687694099379,	precision: 0.623987319479,	f_measure: 0.654293628809]
+
+threshold: 0.103271468144[accuracy: 0.954648526077, recall: 0.674495341615,	precision: 0.603508162556,	f_measure: 0.637030247479]
+
+threshold: 0.103185151237[accuracy: 0.956320575368, recall: 0.835403726708,	precision: 0.592022008253,	f_measure: 0.692964095959]
+
+threshold: 0.10346482048[accuracy: 0.945406445406, recall: 0.589673913043,	precision: 0.533825338253,	f_measure: 0.560361523564]
+
+threshold: 0.102801807618[accuracy: 0.950754712659, recall: 0.860636645963,	precision: 0.553143712575,	f_measure: 0.673450789793]
+
+threshold: 0.103367253949[accuracy: 0.949311711216, recall: 0.818905279503,	precision: 0.547069502075,	f_measure: 0.655939054726]
+
+threshold: 0.103279695274[accuracy: 0.953262786596, recall: 0.875194099379,	precision: 0.56738391846,	f_measure: 0.688449499962]
+
+threshold: 0.1034422475[accuracy: 0.962161295495, recall: 0.926824534161,	precision: 0.619968839263,	f_measure: 0.742959390073]
+
+threshold: 0.10371479695[accuracy: 0.955324217229, recall: 0.341809006211,	precision: 0.775429326288,	f_measure: 0.474471238044]
+
+threshold: 0.10237235619[accuracy: 0.955496003115, recall: 0.824145962733,	precision: 0.587600332134,	f_measure: 0.686055905639]
+
+threshold: 0.103430279528[accuracy: 0.955667789001, recall: 0.88373447205,	precision: 0.581853035144,	f_measure: 0.701703013023]
+
+threshold: 0.1[accuracy: 0.940997274331, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.1[accuracy: 0.936450674546, recall: 0.346661490683,	precision: 0.449987402368,	f_measure: 0.391623725469]
+
+threshold: 0.101958118627[accuracy: 0.918058132344, recall: 0.318517080745,	precision: 0.310501419111,	f_measure: 0.314458177637]
+
+threshold: 0.101572290888[accuracy: 0.869041892851, recall: 0.545807453416,	precision: 0.236163601243,	f_measure: 0.329679348145]
+
+threshold: 0.101648396741[accuracy: 0.936450674546, recall: 0.346661490683,	precision: 0.449987402368,	f_measure: 0.391623725469]
+
+threshold: 0.101958118627[accuracy: 0.920955587622, recall: 0.493400621118,	precision: 0.371963710857,	f_measure: 0.424161521775]
+
+threshold: 0.102120807609[accuracy: 0.888247554914, recall: 0.0042701863354,	precision: 0.0047311827957,	f_measure: 0.00448887982044]
+
+threshold: 0.100022444399[accuracy: 0.940997274331, recall: 0.0,	precision: NaN,	f_measure: NaN]
+
+threshold: 0.100022444399[accuracy: 0.936473579331, recall: 0.346079192547,	precision: 0.450138853825,	f_measure: 0.391309118841]
+
+threshold: 0.101956545594[accuracy: 0.915767653863, recall: 0.171389751553,	precision: 0.222474174855,	f_measure: 0.19361912071]
+
+threshold: 0.100968095604[accuracy: 0.85812776289, recall: 0.371700310559,	precision: 0.17305259353,	f_measure: 0.236157356024]
+
+threshold: 0.10118078678[accuracy: 0.93685150828, recall: 0.27251552795,	precision: 0.442902208202,	f_measure: 0.33741888969]
+
+threshold: 0.101687094448[accuracy: 0.918928514167, recall: 0.198175465839,	precision: 0.257243638196,	f_measure: 0.22387896064]
+
+threshold: 0.101119394803[accuracy: 0.89627568199, recall: 0.055900621118,	precision: 0.0642713679982,	f_measure: 0.0597944565556]
+
+threshold: 0.100298972283[accuracy: 0.908907670812, recall: 0.0021350931677,	precision: 0.00389518413598,	f_measure: 0.00275827482447]
+
+threshold: 0.100013791374[accuracy: 0.936450674546, recall: 0.346661490683,	precision: 0.449987402368,	f_measure: 0.391623725469]
+

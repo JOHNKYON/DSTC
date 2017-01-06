@@ -29,6 +29,7 @@ def raw_initializer(dataset):
         input_raw.append(input_row)
         output_raw.append(output_row)
     logger.info("Finish raw initializing")
+    print(len(input_raw))
     return {"input": input_raw, "output": output_raw}
 
 
@@ -94,7 +95,6 @@ def label_dict(output):
             slot_session.append(act_sentence)
         label.append({"act": act_session, "slot": slot_session})
     return label, act_dict, slot_dict
-
 
 class Set:
     def __init__(self, token, dictionary, output, mode):
